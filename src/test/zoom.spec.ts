@@ -19,7 +19,7 @@ describe('zoom webhooks', () => {
   describe('security', () => {
     test('should return security error', async () => {
       const response = await server.post(`/zoom/meeting-started`).send({});
-      expect(response.text.code).toBe(Errors.NOT_AUTHORIZED);
+      expect(response.body.code).toBe(Errors.NOT_AUTHORIZED);
     });
   });
 
