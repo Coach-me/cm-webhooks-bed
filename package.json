@@ -23,11 +23,14 @@
     "class-validator": "^0.12.2",
     "dotenv-safe": "^8.2.0",
     "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
     "express-async-handler": "^1.1.4",
     "lodash": "^4.17.15",
     "mongodb": "^3.5.7",
     "mongoose": "^5.9.15",
+    "nested-error-stacks": "^2.1.0",
     "reflect-metadata": "^0.1.13",
+    "supertest": "^6.0.1",
     "winston": "^3.2.1"
   },
   "devDependencies": {

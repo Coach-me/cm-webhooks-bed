@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import logging from './logging';
+import { ZoomMeetingModel } from './models/zoom/model';
 
 let database: mongoose.Connection;
 export const connect = async (): Promise<void> => {
@@ -38,7 +39,6 @@ export const dropDatabase = async () => {
     return;
   }
   if (process.env.NODE_ENV === 'test') {
-    // eslint-disable-next-line no-restricted-syntax
-    // await mongoose.connection.db.dropDatabase();
+    await ZoomMeetingModel.collection.drop();
   }
 };

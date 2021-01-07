@@ -1,2 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-module.exports = async () => {};
+import { connect, disconnectDatabase, dropDatabase } from '../../database';
+
+module.exports = async () => {
+  await connect();
+  await dropDatabase();
+  await disconnectDatabase();
+};
