@@ -1894,7 +1894,7 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
-chalk@^2.0.0:
+chalk@^2.0.0, chalk@^2.4.1:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -4070,6 +4070,13 @@ jest-snapshot@^26.6.2:
     natural-compare "^1.4.0"
     pretty-format "^26.6.2"
     semver "^7.3.2"
+
+jest-summary-reporter@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/jest-summary-reporter/-/jest-summary-reporter-0.0.2.tgz#53b9997b56f343a0dd9af24199c68d371e01f534"
+  integrity sha512-rZ3ThO57l+ZJCxF74cXIGQU3cV9I7bSBe1ElBp0taE3x2JghgD69bNCKt0LvpVQX5azTRHG7LmcjIpwriVnTng==
+  dependencies:
+    chalk "^2.4.1"
 
 jest-util@^26.1.0, jest-util@^26.6.2:
   version "26.6.2"
