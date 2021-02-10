@@ -1,0 +1,46 @@
+import { ZoomMeetingModel } from '../../../models/zoom/model';
+/* eslint-disable @typescript-eslint/camelcase */
+
+export const createZoomMeeting = async ({
+  zoomMeetingId = Math.floor(Math.random() * 1000),
+  start_url = 'url',
+  join_url = 'url',
+  created_at = new Date(),
+  start_time = new Date(),
+  duration = 2,
+  status = 'OK',
+  encrypted_password = '123',
+  h323_password = '123',
+  host_id = '123',
+  uuid = '123',
+  timezone = 'time',
+  topic = 'topic',
+  password = '123',
+  pstn_password = '123',
+  host_email = 'test@test.com',
+  type = 2,
+  settings = {},
+  startTimes = null,
+}) => {
+  return ZoomMeetingModel.create({
+    zoomMeetingId,
+    start_url,
+    join_url,
+    created_at,
+    duration,
+    encrypted_password,
+    h323_password,
+    host_email,
+    password,
+    host_id,
+    pstn_password,
+    start_time,
+    status,
+    timezone,
+    topic,
+    type,
+    uuid,
+    startTimes,
+    settings,
+  });
+};

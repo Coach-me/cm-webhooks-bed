@@ -1,15 +1,20 @@
-import express, { Express } from 'express';
+import express from 'express';
 import bodyParser from 'body-parser';
 import requestLoggingMiddleware from './middleware/requestLogging';
-import { callHttp } from './utils/http';
+import errorMiddleware from './middleware/error';
+import authorizationWebhook from './middleware/authorizationWebhook';
 import ZoomRouter from './routes/zoom';
 
-const application = async (): Promise<Express> => {
+require('express-async-errors');
+// Handles Async errors so Error Middleware can catch them
+
+const application = () => {
   const app = express();
-  await callHttp.get('https://www.google.com');
-  app.use(requestLoggingMiddleware);
   app.use(bodyParser.json());
+  app.use(requestLoggingMiddleware);
+  app.use(authorizationWebhook);
   app.use(ZoomRouter());
+  app.use(errorMiddleware);
   return app;
 };
 

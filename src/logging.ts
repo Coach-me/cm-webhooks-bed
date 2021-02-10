@@ -42,6 +42,7 @@ const appFormat = format.combine(
   }),
   format.prettyPrint(),
   format.json(),
+  format.splat(),
   format.printf((info) => {
     const errorStack = info.metadata?.stack;
     const { timestamp, ...rest } = info.metadata;

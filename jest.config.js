@@ -6,6 +6,7 @@ module.exports = {
   testEnvironment: 'node',
   testPathIgnorePatterns: ['node_modules/', 'dist/'],
   preset: 'ts-jest',
+  reporters: ['default', 'jest-summary-reporter'],
   verbose: false,
   collectCoverage: false,
   coverageReporters: ['text', 'json', 'html'],
