@@ -20,7 +20,11 @@ export const createZoomMeeting = async ({
   host_email = 'test@test.com',
   type = 2,
   settings = {},
+  meetingParticipants = 0,
   startTimes = null,
+  endTimes = null,
+  participant = null,
+  participantWaiting = null,
 }) => {
   return ZoomMeetingModel.create({
     zoomMeetingId,
@@ -41,6 +45,10 @@ export const createZoomMeeting = async ({
     type,
     uuid,
     startTimes,
+    endTimes,
+    participant,
+    participantWaiting,
+    meetingParticipants,
     settings,
   });
 };
